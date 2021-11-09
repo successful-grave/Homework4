@@ -9,32 +9,20 @@ namespace Task6
         static void Main(string[] args)
         {
             Console.Write("Введите число: ");
-            double number = double.Parse(Console.ReadLine()); // куб введённого числа
-            double left_edge = 0;
-            double right_edge = number;
+            int number = int.Parse(Console.ReadLine()); // куб введённого числа
+            int left_edge = 0;
+            int right_edge = number;
             double eps = 0.001; //погрешность
-            double root; //искомое число
+            int root; //искомое число
             while(right_edge - left_edge > eps)
             {
-                double middle = (left_edge + right_edge) / 2; //находим середину
+                int middle = (left_edge + right_edge) / 2; //находим середину
 
+                int middle_func = (int)Math.Pow(middle, 3); //считаем куб числа, который посередине интервала
 
-                double middle_func = middle; //считаем куб числа, который посередине интервала
-                for(int i = 0; i < 3; i++)
-                {
-                    middle_func *= middle;
-                }
-                double start_func = left_edge; //считаем куб числа на левой границе
-                for (int i = 0; i < 3; i++)
-                {
-                    start_func *= left_edge;
-                }
-                double end_func = right_edge; //считаем куб числа на правой границе
-                for (int i = 0; i < 3; i++)
-                {
-                    end_func *= right_edge;
-                }
+                int start_func = (int)Math.Pow(left_edge, 3); //считаем куб числа на левой границе
 
+                int end_func = (int)Math.Pow(right_edge, 3); //считаем куб числа на правой границе
 
                 if(start_func * middle_func <= 0)
                 {

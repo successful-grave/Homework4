@@ -13,17 +13,18 @@ namespace Task9
             for (uint i = 0; i < N; i++)
             {
                 uint numb = i;
+                uint PercentageOfTheNumber = numb % 10;
                 uint sumOfEven = 0;
                 uint sumOfOdd = 0;
                 while (numb > 0)
                 {
-                    if ((numb % 10) % 2 == 0)
+                    if ((PercentageOfTheNumber) % 2 == 0)
                     {
-                        sumOfEven += numb % 10;
+                        sumOfEven += PercentageOfTheNumber;
                     }
                     else
                     {
-                        sumOfOdd += numb % 10;
+                        sumOfOdd += PercentageOfTheNumber;
                     }
                     numb /= 10;
                 }

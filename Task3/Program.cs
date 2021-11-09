@@ -9,7 +9,7 @@ namespace Task3
         {
             Console.Write("Введите число А: ");
             int A = int.Parse(Console.ReadLine());
-            for(int i = A - 1; i > 1; i--)
+            for(int i = A / 2; i > 1; i--)
             {
                 if(A % i == 0)
                 {

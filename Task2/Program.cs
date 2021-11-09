@@ -13,10 +13,7 @@ namespace Task2
             int count = 0;
             for(int i = 1; i < Math.Sqrt(A); i++)
             {
-                if(Math.Pow(i, 2) < A)
-                {
-                    count++;
-                }
+                count++;
             }
             Console.WriteLine($"Количество положительных целых чисел, квадрат которых меньше A: {count}");
         }

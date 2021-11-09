@@ -13,34 +13,22 @@ namespace Task4
             Console.Write("Введите число B: ");
             int B = int.Parse(Console.ReadLine());
             int sum = 0;
-            if(A < B)
+            if (A == B)
             {
-                for(int i = A; i <= B; i++)
-                {
-                    if(i % 7 == 0)
-                    {
-                        sum += i;
-                    }
-                }
+                Console.WriteLine("\aДиапазон не может быть равен нулю");
             }
-            else if(A > B)
+            if (A > B)
             {
                 int tmp = A;
                 A = B;
                 B = tmp;
-                Console.WriteLine("Левая граница диапазона не может быть больше правой\n" +
-                    "Границы поменяны местами автоматически");
-                for (int i = A; i <= B; i++)
-                {
-                    if (i % 7 == 0)
-                    {
-                        sum += i;
-                    }
-                }
             }
-            else
+            for (int i = A; i <= B; i++)
             {
-                Console.WriteLine("\aДиапазон не может быть равен нулю");
+                if (i % 7 == 0)
+                {
+                    sum += i;
+                }
             }
             Console.WriteLine($"Сумма чисел, которые делятся без остатка на 7: {sum}");
         }
